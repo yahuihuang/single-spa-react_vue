@@ -23,3 +23,13 @@
     ? Organization name (can use letters, numbers, dash or underscore) grace
     Vue CLI v5.0.4
     ? Please pick a preset: Default ([Vue 3] babel, eslint)
+5.C:\Users\USER\.npmrc
+    registry=https://registry.npmjs.org/
+    這是npm registry路徑
+6.啟動base proj
+    cd base
+    npm run start
+    http://localhost:9000/
+7.啟動vue3
+
+8.啟動react
