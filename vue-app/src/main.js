@@ -2,7 +2,10 @@ import { h, createApp } from 'vue';
 import singleSpaVue from 'single-spa-vue';
 
 import App from './App.vue';
+import router from './router'
 
+// vue-cli-single-spa plugin改寫應用入口
+// createApp().use().use()
 const vueLifecycles = singleSpaVue({
   createApp,
   appOptions: {
@@ -19,8 +22,12 @@ const vueLifecycles = singleSpaVue({
       });
     },
   },
+  handleInstance(app) {
+    app.use(router);
+  }
 });
 
+// 要求返回bootstrap, mount, unmount
 export const bootstrap = vueLifecycles.bootstrap;
 export const mount = vueLifecycles.mount;
 export const unmount = vueLifecycles.unmount;

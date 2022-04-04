@@ -9,14 +9,14 @@ registerApplication({
       // 加載一個遠程的模塊, 此模塊會expose: bootstrap、mount、unmount
       "https://unpkg.com/single-spa-welcome/dist/single-spa-welcome.js"
     ),
-  activeWhen: ["/"],
+  activeWhen: (location) => location.pathname == "/",
 });
 
-// registerApplication({
-//   name: "@grace/navbar",
-//   app: () => System.import("@grace/navbar"),
-//   activeWhen: ["/"]
-// });
+registerApplication({
+  name: "@grace/vue-app",
+  app: () => System.import("@grace/vue-app"),
+  activeWhen: ["/vue"],
+});
 
 start({
   // 啟動
