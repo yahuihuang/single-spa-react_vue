@@ -56,3 +56,17 @@
         =>  http://127.0.0.9000/
             http://127.0.0.9000/vue
 8.啟動react
+  Ref.https://single-spa.js.org/docs/ecosystem-react
+  1) npm install react-router-dom
+  2) package.json
+        "start": "webpack serve --port 4000",
+  3) modify grace-root-config.js & index.ejs
+    這個也要加上
+        "react": "https://cdn.bootcdn.net/ajax/libs/react/17.0.2/umd/react.production.min.js",
+        "react-dom": "https://cdn.bootcdn.net/ajax/libs/react-dom/17.0.2/umd/react-dom.production.min.js",
+        "react-router-dom": "https://cdn.bootcdn.net/ajax/libs/react-router-dom/5.2.0/react-router-dom.min.js"
+ 4) modify grace-react.js
+ 5) react-app / webpack.config.js
+        externals: ["react-router-dom"],
+ 6) http://localhost:9000/react
+    http://localhost:9000/react/about

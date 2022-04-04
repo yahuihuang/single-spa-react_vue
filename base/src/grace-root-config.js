@@ -19,6 +19,13 @@ registerApplication({
   customProps: { a: 1 },
 });
 
+registerApplication({
+  name: "@grace/react",
+  app: () => System.import("@grace/react"),
+  activeWhen: ["/react"],
+  customProps: { a: 1 },
+});
+
 start({
   // 啟動
   urlRerouteOnly: true,
