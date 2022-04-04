@@ -16,6 +16,7 @@ registerApplication({
   name: "@grace/vue-app",
   app: () => System.import("@grace/vue-app"),
   activeWhen: ["/vue"],
+  customProps: { a: 1 },
 });
 
 start({
